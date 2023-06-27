@@ -1,6 +1,6 @@
 class DiariesController < ApplicationController
   def index
-    @diaries = Diary.all
+    @diaries = Diary.order(datetime: :desc)
   end
 
   def new
