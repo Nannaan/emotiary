@@ -2,7 +2,7 @@
   <div class="container">
     <h3>投稿する</h3>
     <%= form_with(model: @diary, url: diaries_path, method: :post, local: true) do |form| %>
-      <%= form.text_field :datetime, placeholder: "日付・時間" %>
+      <%= form.text_field :datetime, value: DateTime.now.strftime("%Y-%m-%d %H:%M:%S"), placeholder: "日付・時間" %>
       <%= form.text_area :content, placeholder: "書いてみる", rows: "5" %>
       <%= form.text_field :image, placeholder: "写真のURL" %>
       <%= form.text_field :emotion, placeholder: "感情" %>
