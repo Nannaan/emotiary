@@ -1,9 +1,9 @@
 <div class="contents row">
   <% @diaries.each do |diary| %>
     <div class="content_post">
+      <%= diary.datetime.strftime("%Y/%-m/%-d %H:%M") %><br>
       <%= diary.content %><br>
-      <img src="<%= diary.image %>" style="max-width: 300px; max-height: 300px;"><br>
-      <%= diary.datetime %><br>
+      <img src="<%= diary.image %>" style="max-width: 300px; max-height: 250px;"><br>
       <%= diary.emotion %><br>
       元気度 <%= diary.score %>％<br><br>
     </div>
